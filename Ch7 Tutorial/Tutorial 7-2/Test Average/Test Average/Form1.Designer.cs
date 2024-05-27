@@ -41,6 +41,7 @@
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.medianscorelabel = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // averageScoreDescriptionLabel
@@ -82,6 +83,7 @@
             this.testScoresListBox.Name = "testScoresListBox";
             this.testScoresListBox.Size = new System.Drawing.Size(178, 130);
             this.testScoresListBox.TabIndex = 6;
+            this.testScoresListBox.SelectedIndexChanged += new System.EventHandler(this.testScoresListBox_SelectedIndexChanged);
             // 
             // testScoresDescriptionLabel
             // 
@@ -169,6 +171,16 @@
             this.medianscorelabel.TabIndex = 12;
             this.medianscorelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(490, 114);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(178, 130);
+            this.listBox1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -184,6 +196,7 @@
             this.Controls.Add(this.averageScoreDescriptionLabel);
             this.Controls.Add(this.lowScoreDescriptionLabel);
             this.Controls.Add(this.highScoreDescriptionLabel);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.testScoresListBox);
             this.Controls.Add(this.testScoresDescriptionLabel);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -209,6 +222,7 @@
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label medianscorelabel;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

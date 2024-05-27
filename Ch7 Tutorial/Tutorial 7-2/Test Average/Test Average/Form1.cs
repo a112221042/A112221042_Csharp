@@ -112,7 +112,7 @@ namespace Test_Average
 
 
 
-            private void GetScoresFromFile(int[] scores)
+        private void GetScoresFromFile(int[] scores)
         {
             StreamReader inputFile = null;
             int index = 0;
@@ -120,12 +120,13 @@ namespace Test_Average
             {
                 inputFile = File.OpenText(openFile.FileName);
 
-                while (!inputFile.EndOfStream && index < scores.Length )
+                while (!inputFile.EndOfStream && index < scores.Length)
                 {
                     scores[index] = int.Parse(inputFile.ReadLine());
                     index++;
                 }
             }
+
             else
             {
                 MessageBox.Show("已取消");
@@ -140,6 +141,9 @@ namespace Test_Average
             this.Close();
         }
 
-        
+        private void testScoresListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
